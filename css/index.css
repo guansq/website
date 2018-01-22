@@ -83,7 +83,7 @@ body{
 
 .logo a{
     display: inline-block;
-    width: 14vw;
+    width: 160px;
     height: 50px;
     background: url("../image/index/promic_sprite.png") no-repeat -630px -490px;
 }
@@ -750,7 +750,7 @@ main{
     width:30%;
 }
 .main01 .wrap .bag:nth-child(2n + 1){
-    background: #FF5722;
+    /*background: #FF5722;*/
 }
 
 @media screen and (min-width: 1100px) {
@@ -765,7 +765,23 @@ main{
     }
 }
 
+.bag h3{
+    margin: 10px 0;
+    color: lawngreen;
+    font-size:20px;
+    /*text-align: center;*/
+}
+.bag p{
+    color: #333;
+    margin: 10px 0;
+}
 
+.com_class{
+    background: #e8e8e8;
+    display: none;
+    height:100%;
+    padding:10px;
+}
 
 
 

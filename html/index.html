@@ -100,8 +100,11 @@
          </div>
       </div>
       
-      <div class="swiper-container bag">
-      
+      <div class="swiper-container bag e_top">
+         <div class="com_class">
+            <h3></h3>
+            <p></p>
+         </div>
       </div>
       
       <div class="swiper-container bag">
@@ -111,7 +114,12 @@
          </div>
       </div>
       
-      <div class="swiper-container bag"></div>
+      <div class="swiper-container bag e_center_left">
+         <div class="com_class">
+            <h3></h3>
+            <p></p>
+         </div>
+      </div>
       
       
       <div class="swiper-container bag">
@@ -121,7 +129,12 @@
          </div>
       </div>
       
-      <div class="swiper-container bag"></div>
+      <div class="swiper-container bag e_center_right ">
+        <div class="com_class">
+           <h3></h3>
+           <p></p>
+        </div>
+      </div>
       
       <div class="swiper-container bag">
          <div class="swiper-wrapper">
@@ -130,7 +143,12 @@
          </div>
       </div>
       
-      <div class="swiper-container bag"></div>
+      <div class="swiper-container bag e_bottom ">
+         <div class="com_class">
+            <h3></h3>
+            <p></p>
+         </div>
+      </div>
       
       <div class="swiper-container bag">
          <div class="swiper-wrapper">
@@ -206,19 +224,52 @@
   $(document).ready(function () {
     var mySwiper = new Swiper('.swiper-container',{
       autoplay : false,
+      loop:true,
       delay:1000
     });
-    
+    var flag = true
     $('.swiper-container').mouseenter(function(){
-//      console.log($(this).index())
+      flag = !flag
+      console.log($(this).index())
       var i = $(this).index()
+//      console.log(this)
       mySwiper[i].autoplay.start();
+      var title =  $(this).find('.swiper-wrapper').find('img').attr('data-title');
+      var txt =  $(this).find('.swiper-wrapper').find('img').attr('data-title-desc');
+      if(i == 0 || i == 2){
+        $('.e_top .com_class').show()
+        $('.e_top .com_class').find('h3').html(title)
+        $('.e_top .com_class').find('p').html(txt)
+      }
+      if(i == 6 || i == 8){
+        $('.e_bottom .com_class').show()
+        $('.e_bottom .com_class').find('h3').html(title)
+        $('.e_bottom .com_class').find('p').html(txt)
+      }
+      if(i == 4){
+       
+       if(flag){
+         $('.e_center_left .com_class').show()
+         $('.e_center_left .com_class').find('h3').html(title)
+         $('.e_center_left .com_class').find('p').html(txt)
+       } else{
+         $('.e_center_right .com_class').show()
+         $('.e_center_right .com_class').find('h3').html(title)
+         $('.e_center_right .com_class').find('p').html(txt)
+         
+       }
+      }
     })
     $('.swiper-container').mouseleave(function(){
       var i = $(this).index()
       mySwiper[i].autoplay.stop();
+      $('.com_class').hide()
     })
     
+    
+    
+    
+    $()
   })
   
 </script>
