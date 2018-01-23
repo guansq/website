@@ -7,7 +7,7 @@ $(function () {
   // layui.config({
   //   base: '/res/js/modules/' //你的模块目录
   // }).use('index'); //加载入口
-  
+  //
   $(".has-sub").mouseover(function () {
     $(this).find(".sub-nav").css({
       "display": "block",
@@ -48,5 +48,39 @@ $(function () {
       scrollTop: 0
     }, 1000);
   });
-  
+
+
+//  产品介绍
+//   获取li 宽度
+  window.onresize = function () {
+    var liW = $('.intro_pd li').width();
+    $(".intro_pd li").css('height', liW)
+    var h = $(".intro_pd li").css('height', liW)
+  }
+  window.onresize()
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
