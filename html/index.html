@@ -30,24 +30,25 @@
    <!--<script src="..lib/layui/layui.all.js"></script>-->
    <style>
       @media screen and (min-width: 1100px) {
-         main, .main01 .wrap{
-            margin:0 auto;
+         main, .main01 .wrap {
+            margin: 0 auto;
             margin-top: 80px;
-            width:800px;
+            width: 800px;
          }
-         .main01 .wrap .bag{
-            width:15rem;
-            height:15rem;
+         
+         .main01 .wrap .bag {
+            width: 15rem;
+            height: 15rem;
          }
       }
-
+   
    </style>
 </head>
 
 
 <body>
 <header id="header" class="header">
-   <div class="content ffc">
+   <div class="content">
       <div class="fl logo">
          <a href="javascript:void(0);"></a>
       </div>
@@ -145,10 +146,10 @@
       </div>
       
       <div class="swiper-container bag e_center_right ">
-        <div class="com_class">
-           <h3></h3>
-           <p></p>
-        </div>
+         <div class="com_class">
+            <h3></h3>
+            <p></p>
+         </div>
       </div>
       
       <div class="swiper-container bag">
@@ -226,6 +227,76 @@
       </div>
    </div>
    <div class="footer-bottom">
+      <div class="content fixWauto">
+         <div class="fl footerLeft">
+            <div class="contactInfo">
+               Platinastraat 34<br>
+               6031 TW Nederweert<br>
+               The Netherlands
+            </div>
+            <div class="contactInfo">
+               <a href="javascript:void(0);">0031 (0)85 06 60 300</a><br><br>
+               <a href="javascript:void(0);">info@promic.com</a><br>
+            </div>
+            <div class="submenu">
+               <p><a href="javascript:void(0);">sitemap</a></p>
+               <p><a href="javascript:void(0);">disclaimer</a></p>
+               <p><a href="javascript:void(0);">algemene voorwaarden</a></p>
+            </div>
+            <div class="komma">
+               <div class="komma_logo">
+                  <span class="up"></span>
+                  <span class="hover"></span>
+               </div>
+               <a href="javascript:void(0);">
+                  website ontwikkeld door
+                  <br>
+                  Komma Mediadesign
+               </a>
+            </div>
+            <div class="esf">
+               <img src="../image/index/esf.png" alt="">
+            </div>
+         </div>
+         <ul class="fr footerRight">
+            <li>
+               <a href="javascript:void(0);">Pop-Ups</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Zipper-Walls</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Roll-Banners</a></li>
+            <li>
+               <a href="javascript:void(0);">Banner<br>Stands</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Lighting</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Counters</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Flex<br>Tower</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Brochure<br>holders</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Poster<br>holders</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Outdoor</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Flags</a>
+            </li>
+            <li>
+               <a href="javascript:void(0);">Cases</a>
+            </li>
+         </ul>
+         <div class="clear"></div>
+      </div>
    </div>
 </footer>
 
@@ -238,32 +309,34 @@
 <script type="text/javascript">
   $(document).ready(function () {
     Global = {
-        'curindex':0,//当前swiper的索引位置
-        'curclass':''//当前swiper
+      'curindex': 0,//当前swiper的索引位置
+      'curclass': ''//当前swiper
     };
     cur = 0;
-    mySwiper = new Swiper('.swiper-container',{
-      on :{slideChangeTransitionStart: function(){
+    mySwiper = new Swiper('.swiper-container', {
+      on: {
+        slideChangeTransitionStart: function () {
           //console.log(cur);
           //alert(this.realIndex);
           //console.log(swiper);
-          changSwiper(this,cur);
-          if(cur < 4){
-              cur = cur + 1;//最多5个div
+          changSwiper(this, cur);
+          if (cur < 4) {
+            cur = cur + 1;//最多5个div
           }
-
+          
           //index = this.activeIndex;
           //console.log(this[0].slides[0]);
           //console.log(this.element);
           //alert(this.activeIndex);
           //切换结束时，告诉我现在是第几个slide);
-      }},
-      autoplay : false,
-      loop:true,
-      delay:1000
+        }
+      },
+      autoplay: false,
+      loop: true,
+      delay: 1000
     });
     var flag = true
-    $('.swiper-container').mouseenter(function(){
+    $('.swiper-container').mouseenter(function () {
       flag = !flag
       //console.log($(this).index())
       var i = $(this).index()
@@ -271,53 +344,54 @@
       mySwiper[i].autoplay.start();
       var img = mySwiper[i].slides[Global.curindex];
       var title = $(img).attr('data-title');
-      var txt =  $(img).attr('data-title-desc');
+      var txt = $(img).attr('data-title-desc');
       //var title =  $(this).find('.swiper-wrapper').find('img').attr('data-title');
       //var txt =  $(this).find('.swiper-wrapper').find('img').attr('data-title-desc');
-      if(i == 0 || i == 2){
-          Global.curclass = '.e_top .com_class';
+      if (i == 0 || i == 2) {
+        Global.curclass = '.e_top .com_class';
         $('.e_top .com_class').show()
         $('.e_top .com_class').find('h3').html(title)
         $('.e_top .com_class').find('p').html(txt)
       }
-      if(i == 6 || i == 8){
-          Global.curclass = '.e_bottom .com_class';
+      if (i == 6 || i == 8) {
+        Global.curclass = '.e_bottom .com_class';
         $('.e_bottom .com_class').show()
         $('.e_bottom .com_class').find('h3').html(title)
         $('.e_bottom .com_class').find('p').html(txt)
       }
-      if(i == 4){
-       
-       if(flag){
-           Global.curclass = '.e_center_left .com_class';
-         $('.e_center_left .com_class').show()
-         $('.e_center_left .com_class').find('h3').html(title)
-         $('.e_center_left .com_class').find('p').html(txt)
-       } else{
-           Global.curclass = '.e_center_right .com_class';
-         $('.e_center_right .com_class').show()
-         $('.e_center_right .com_class').find('h3').html(title)
-         $('.e_center_right .com_class').find('p').html(txt)
-         
-       }
+      if (i == 4) {
+        
+        if (flag) {
+          Global.curclass = '.e_center_left .com_class';
+          $('.e_center_left .com_class').show()
+          $('.e_center_left .com_class').find('h3').html(title)
+          $('.e_center_left .com_class').find('p').html(txt)
+        } else {
+          Global.curclass = '.e_center_right .com_class';
+          $('.e_center_right .com_class').show()
+          $('.e_center_right .com_class').find('h3').html(title)
+          $('.e_center_right .com_class').find('p').html(txt)
+          
+        }
       }
     });
-
-    $('.swiper-container').mouseleave(function(){
+    
+    $('.swiper-container').mouseleave(function () {
       var i = $(this).index()
       mySwiper[i].autoplay.stop();
       $('.com_class').hide()
     });
-      function changSwiper(swiper,cur){
-          var index = swiper.realIndex;
-          var img = swiper.slides[index];
-          Global.curindex = index;
-          if(Global.curclass != ''){
-              $(Global.curclass).find('h3').html($(img).attr('data-title'));
-              $(Global.curclass).find('p').html($(img).attr('data-title-desc'))
-          }
+    
+    function changSwiper(swiper, cur) {
+      var index = swiper.realIndex;
+      var img = swiper.slides[index];
+      Global.curindex = index;
+      if (Global.curclass != '') {
+        $(Global.curclass).find('h3').html($(img).attr('data-title'));
+        $(Global.curclass).find('p').html($(img).attr('data-title-desc'))
       }
+    }
   })
-  
+
 </script>
 </html>

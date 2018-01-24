@@ -74,9 +74,9 @@ body {
 }
 
 .content {
-  width: 100%;
-  height: auto;
+  width: 980px;
   margin: 0 auto;
+  height: auto;
 }
 
 .logo {
@@ -950,9 +950,10 @@ body {
 .selection .l{
   width:45%;
   height:100%;
+  text-align: center;
 }
 .selection .l img{
-  width:100%;
+  width:90%;
 }
 .selection .r{
   width:55%;
@@ -964,6 +965,9 @@ body {
   width:80%;
   margin:0;
 }
+.top ul.swiper-pagination{
+  position: relative;
+}
 ul.listImg{
   width:20%;
 }
@@ -971,27 +975,197 @@ ul.listImg{
   margin-top:0.5px;
   float: left;
   display: inline-block;
-  height:15%;
+  /*height:15%;*/
 }
 
-.listImg li img{
+.swiper-pagination-bullet:hover{
+  border:1px solid #f7750b;
+}
+.swiper-pagination-bullet{
+  width: 100px;
+  height: 80px;
+  border-radius: 0;
+}
+.swiper-pagination-bullet-active{
+  border:1px solid #f7750b;
+  background: transparent;
+  border:1px solid #f7750b;
+}
+.swiper-pagination-bullet img{
   width:100%;
   height:100%;
 }
-.border_red{
-  border:1px solid #FD482C;
+
+.selection{
+  margin-top:40px;
 }
 
+/*selection*/
+.bot ol{
+  list-style-type:decimal;
+  list-style-position:inside;
+}
+.bot li{
+  margin-left:0;
+  position: relative;
+  float: left;
+  padding-left: 40px;
+  padding-bottom:20px;
+  width: 490px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  color: rgb(145, 145, 148);
+  font-size:18px;
+  -moz-transition:transform, color 2s linear; /* Firefox 4 */
+  -webkit-transition:transform,color 2s linear; /* Safari and Chrome */
+  -o-transition:transform,color 2s linear;
+}
+.bot li.nonestyle{
+  list-style-type:none;
+  list-style-position:inside;
+}
+.bot li.transform{
+  /*margin-left:40px;*/
+  color: #FD482C;
+  transform:translateX(40px);
+  -webkit-transform:translateX(40px);  /*兼容-webkit-引擎浏览器*/
+  -moz-transform:translateX(40px);     /*兼容-moz-引擎浏览器*/
+}
+.bot ol h4{
+  padding-top:20px;
+}
+.bot h4{
+  position: relative;
+  float: left;
+  padding-left: 40px;
+  width: 490px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  color: #FD482C;
+  font-size:18px;
+}
+.bot .detailOpmerkingZW{
+  padding-top: 20px;
+}
 
+/* Optional */
 
+/*Optional_wrap*/
+.Optional_wrap,.Optional_p {
+  margin-top:20px;
+}
+.FD482C{
+  color: #FD482C;
+}
+h3.FD482C{
+  font-size:16px;
+}
 
+.Optional_p a{
+  text-decoration: underline;
+}
+.Optional_p a:hover{
+  text-decoration: none;
+}
 
+#ctaBlockFull {
+  height: 90px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  background: #F7750B;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+#ctaBlockFull .shadowLeft {
+  top: 0;
+  width: 40px;
+  height: 110px;
+}
+#ctaBlockFull .ctaContent {
+  top: 3px;
+  width: 922px;
+  height: 90px;
+}
+#ctaBlockFull .shadowRight {
 
+  top: 0;
+  width: 40px;
+  height: 90px;
+}
+ctaBlockFull p {
+  color: #fff;
+  margin-top: 21px;
+  padding-bottom: 0;
+}
 
+p {
+  font-family: 'Proxima N W01 Reg', Arial, sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 27px;
+  padding-bottom: 27px;
+  float: left;
+}
+  #ctaBlockFull .gegevens {
+    margin-left: 110px;
+}
 
+#ctaBlockFull p {
+    color: #fff;
+    margin-top: 18px;
+    padding-bottom: 0;
+}
 
+#ctaBlockFull a {
+  float: right;
+  color: #ffffff;
+}
+.ctaButton {
+  margin-top: 29px;
+  float: left;
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  background: #5E5D5D;
+}
+ a.ctaButton:hover{
+  background-color: #F7750B;
+}
+.ctaButton .left {
+  float: left;
+  display: block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  padding:0 15px;
+  font-size:14px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-right:1px solid #ffffff;
+}
 
-
+.ctaButton .right {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius:8px;
+  float: left;
+  display: block;
+  height: 30px;
+  line-height:30px;
+  width:30px;
+  padding:0 10px;
+}
+.ctaButton .right i{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-image: url('../image/index/icon_next@2x.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
 
 
