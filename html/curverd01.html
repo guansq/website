@@ -150,7 +150,42 @@
       
       <div class="selection ffc">
          <div class="l"><img src="../image/index/zipper_walls.jpg" alt=""></div>
-         <div class="r"></div>
+         <div class="r">
+            <div class="top ffc">
+               <div class=" swiper">
+                  <div class="">
+                     <img class="" src="../image/index/zipper_walls.jpg" alt="">
+                     <img class="" src="../image/index/zipper_walls.jpg" alt="">
+                     <img class="" src="../image/index/zipper_walls.jpg" alt="">
+                     <img class="" src="../image/index/zipper_walls.jpg" alt="">
+                     <img class="" src="../image/index/zipper_walls.jpg" alt="">
+                     <img class="" src="../image/index/zipper_walls.jpg" alt="">
+                  </div>
+               </div>
+               
+               <ul class="listImg clearfloat swiper-pagination">
+                  <li class=""><img src="../image/index/zipper_walls.jpg" alt=""></li>
+                  <li class=""><img src="../image/index/pop_ups.jpg" alt=""></li>
+                  <li class=""><img src="../image/index/zipper_walls.jpg" alt=""></li>
+                  <li class=""><img src="../image/index/esf.png" alt=""></li>
+                  <li class=""><img src="../image/index/esf.png" alt=""></li>
+                  <li class=""><img src="../image/index/esf.png" alt=""></li>
+               </ul>
+            
+            </div>
+            
+            <div class="bot clearfloat">
+               <ol class="clearfloat">
+                  <li class="transform ">赤发鬼</li>
+                  <li class="">赤发鬼</li>
+                  <li class="">赤发鬼</li>
+                  <li>赤发鬼</li>
+                  <h4>Optioneel:</h4>
+                  <li class="nonestyle ">脂肪酸的</li>
+                  <li class="nonestyle ">考虑的神色</li>
+               </ol>
+            </div>
+         </div>
       </div>
       
       <!--video-->
@@ -321,9 +356,34 @@
 <script src="../lib/jQuery/jquery-min.js"></script>
 <script src="https://cdn.bootcss.com/Swiper/4.1.0/js/swiper.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/carousel.js"></script>
-
+<script src="carousel.js"></script>
 <script type="text/javascript">
+  $(function () {
+    var listLen = $('.swiper-wrapper li.swiper-slide').length + 1
+    var H = ($('.listImg').height() -30) *(1/listLen)
+    var heightLi = $('.listImg li').css('height', H + 'px')
+    console.log(heightLi)
+    console.log(H)
+    console.log(listLen)
+    var mySwiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        bulletElement : 'li',
+        renderBullet: function (index, className) {
+          return '<li class="' + className + '">' + '<img src="../image/index/zipper_walls.jpg" alt="">' + '</li>';
+        },
+      },
+      autoplay:true,
+      loop: true,
+      slidesPerView: 'auto',
+    });
 
+//  $('.my-bullet').click(function () {
+//    $(this).addClass('border_f7750b').siblings().removeClass('border_f7750b');
+//    i = $(this).index()
+//    $('.bot li').eq(i).addClass('transform').siblings('li').removeClass('transform')
+//  })
+  })
 </script>
 </html>

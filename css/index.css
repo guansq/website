@@ -955,16 +955,7 @@ body {
 .selection .l img{
   width:90%;
 }
-.selection .r{
-  width:55%;
-}
-.selection .r .top{
-  height:60%;
-}
-.top .swiper{
-  width:80%;
-  margin:0;
-}
+
 .top ul.swiper-pagination{
   position: relative;
 }
