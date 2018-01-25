@@ -1042,14 +1042,21 @@ ul.listImg{
 /* Optional */
 
 /*Optional_wrap*/
-.Optional_wrap,.Optional_p {
+.Optional_wrap28 h3{
+  font-size:28px;
+  color: #FD482C;
+  margin: 20px 0;
+}
+.Optional_wrap22 h3{
+  font-size:22px;
+  color: #FD482C;
+  margin:20px 0;
+}
+.Optional_p {
   margin-top:20px;
 }
 .FD482C{
   color: #FD482C;
-}
-h3.FD482C{
-  font-size:16px;
 }
 
 .Optional_p a{
