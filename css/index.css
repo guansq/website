@@ -705,7 +705,7 @@ body {
   color: #fff;
 }
 
-/*mainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmainmain*/
+/*newClass newClassnewClass newClassnewClass newClassnewClass newClassnewClass newClassnewClass newClassnewClass newClass */
 .clearfloat:after {
   display: block;
   clear: both;
@@ -718,6 +718,40 @@ body {
 .fixWauto {
   width: 980px;
   margin: 0 auto;
+}
+.mg_lr_20{
+  margin:0 20px;
+}
+.mg_bt20{
+  margin:20px 0;
+}
+.mg_20{
+  margin:20px;
+}
+.mg_t_20{
+  margin-top:20px;
+}
+.mg_b_20{
+  margin-bottom:20px;
+}
+
+.pd_20{
+  padding:20px;
+}
+.pd_bt_20{
+  padding: 20px 0;
+}
+.pd_lr_20{
+  padding:0 20px;
+}
+.pd_b_20{
+  padding-bottom: 20px;
+}
+.pd_b_40{
+  padding-bottom: 40px;
+}
+.pd_t_20{
+  padding-top: 20px;
 }
 
 .ffc {
@@ -1044,19 +1078,23 @@ ul.listImg{
 /*Optional_wrap*/
 .Optional_wrap28 h3{
   font-size:28px;
-  color: #FD482C;
+  color: #f7750b;
   margin: 20px 0;
+}
+.Optional_wrap28{
+  font-size:28px;
+  color: #f7750b;
 }
 .Optional_wrap22 h3{
   font-size:22px;
-  color: #FD482C;
+  color: #f7750b;
   margin:20px 0;
 }
 .Optional_p {
   margin-top:20px;
 }
 .FD482C{
-  color: #FD482C;
+  color: #f7750b;
 }
 
 .Optional_p a{
@@ -1165,17 +1203,76 @@ p {
   background-position: center;
 }
 
+/*nieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.html*/
+.bounce{
+  /*width: 900px;*/
+  /*height: 600px;*/
+  /*z-index: 100;*/
+  display: none;
+  margin: 10px 0;
+  background: #f4f4f4;
+}
+.less_meer{
+  display: none;
+  background: #F7750B;
+  z-index:10;
+  width: 110px;
+  height: 28px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.less_meer span{
+  display: block;
+  line-height:28px;
+}
 
+.less_meer span.left{
+  text-align: center;
+  width:75%;
+  display: block;
+  border-right: 1px solid #ffffff;
+}
+.title-div{
+  padding:20px;
+}
+.title-div span{
+  font-size: 16px;
+  color: #333;
+}
+.title-div span.close{
+  display: block;
+  background: url("../image/index/header_bg.png");
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 2px;
+}
+.NieuwsContentList{
+  flex-wrap: wrap;
+}
+.inli{
+  width:45%;
+  display: none;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+}
+.inli h5{
+  padding-bottom: 10px;
+}
+.inli img.mg_b_20{
+  width: 100%;
+}
 
+.inli div p{
+  line-height: 200%;
+}
 
-
-
-
-
-
-
-
-
+.hoverturn{
+  color: #b6b4b4;
+}
 
 
 
