@@ -117,7 +117,7 @@
             <p>NL | 6 februari | Vakdag Print & Sign Nieuwegein</p>
             <div class="less_meer ffc" style="display: none">
                <span class="left"> less meer</span>
-               <span class="right"><i></i></span>
+               <span class="right">+</span>
             </div>
          </li>
          <li>
@@ -132,7 +132,7 @@
             <p>NL | 6 februari | Vakdag Print & Sign Nieuwegein</p>
             <div class="less_meer ffc" style="display: none">
                <span class="left"> less meer</span>
-               <span class="right"><i></i></span>
+               <span class="right">+</span>
             </div>
          </li>
       </ul>
@@ -373,16 +373,13 @@
 
 <script type="text/javascript">
   $(() => {
+    $('.txt_content li').hover(() => {
+      $('.less_meer').stop().fadeIn(3000);
+    }, () => {
+      $('.less_meer').stop().fadeOut(3000);
+    });
+    
     $('.txt_content li').each(function (i, item) {
-      var flag = true;
-      if (flag == true) {
-        $('.txt_content li').hover(() => {
-          $('.less_meer').fadeIn(3000);
-        }, () => {
-          $('.less_meer').fadeOut(3000);
-        });
-      }
-      
       var pList = $(item).find('p')
 //      console.log(pList);
       for (var i = 3; i < pList.length; i++) {
@@ -397,17 +394,21 @@
         $('.maskDiv').show();
         $('.bounce').addClass('bounce');
         $('.title-p').find('.close').show();
-        $(this).hide()
+        $('.txt_content li').unbind('mouseenter').unbind('mouseleave');
+        $('.less_meer').hide()
         for (var i = 0; i < pList.length; i++) {
 //          console.log($(pList[i]))
           $(pList).show()
         }
         cover()
       });
-
-//      console.log(flag)
+      
       $('.close').click(function () {
-        flag = true;
+        $('.txt_content li').hover(() => {
+          $('.less_meer').stop().fadeIn(3000);
+        }, () => {
+          $('.less_meer').stop().fadeOut(3000);
+        });
         $('.bounce').removeClass('bounce');
         $('.maskDiv').hide();
         $('.title-p').find('.close').hide();
@@ -418,7 +419,6 @@
       });
       
     });
-    
     
     $('.inli').hover(
         () => {
