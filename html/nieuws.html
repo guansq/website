@@ -106,17 +106,36 @@
    </div>
    
    <div class="fixWauto clearfloat">
-      <div class="bounce">
-         <div class="title-div ffc_sb">
-            <span class='title'>title</span>
-            <span class="close"></span>
-         </div>
-      </div>
-      
-      <div class="less_meer ffc">
-         <span class="left"> less meer</span>
-         <span class="right"><i></i></span>
-      </div>
+      <ul class="txt_content ffc_sb">
+         <li>
+            <p class="ffc_sb title-p"><span class="src">10 JANUARI 2018</span> <span class="close" style="display: none"></span></p>
+            <h3 class="tit">Let’s meet @ Lyon of Nieuwegein!</h3>
+            <p>We hebben het al eens gezegd; 2018 wordt een IMPRESSIVE jaar! En wij beginnen</p>
+            <p>NL | 6 februari | Vakdag Print & Sign Nieuwegein | stand E36
+               FR | 6 - 8 februari | C!Print Lyon | stand 2H2 </p>
+            <p>We hebben het al eens gezegd; 2018 wordt een IMPRESSIVE</p>
+            <p>NL | 6 februari | Vakdag Print & Sign Nieuwegein</p>
+            <div class="less_meer ffc" style="display: none">
+               <span class="left"> less meer</span>
+               <span class="right"><i></i></span>
+            </div>
+         </li>
+         <li>
+            <p class="ffc_sb title-p"><span class="src">10 JANUARI 2018</span> <span class="close" style="display:none;"></span></p>
+            <h3 class="tit">Let’s meet @ Lyon of Nieuwegein!</h3>
+            <p>We hebben het al eens gezegd; 2018 wordt een IMPRESSIVE jaar! En wij beginnen
+               dit nieuwe jaar goed met 2 kleurrijke evenementen,
+               waar onze Pop-Up Impress uiteraard de show steelt! </p>
+            <p>NL | 6 februari | Vakdag Print & Sign Nieuwegein | stand E36
+               FR | 6 - 8 februari | C!Print Lyon | stand 2H2 </p>
+            <p>We hebben het al eens gezegd; 2018 wordt een IMPRESSIVE</p>
+            <p>NL | 6 februari | Vakdag Print & Sign Nieuwegein</p>
+            <div class="less_meer ffc" style="display: none">
+               <span class="left"> less meer</span>
+               <span class="right"><i></i></span>
+            </div>
+         </li>
+      </ul>
    </div>
    
    <div class="NieuwsList fixWauto pd_t_20">
@@ -221,7 +240,7 @@
    </div>
 
 </main>
-
+<div class="maskDiv" style="display: none"></div>
 <footer id="footer" class="footer">
    <div class="footer-top">
       <div class="content">
@@ -354,20 +373,53 @@
 
 <script type="text/javascript">
   $(() => {
-    
-    $('.less_meer').click(function () {
-      $('.bounce').show();
+    $('.txt_content li').each(function (i, item) {
+      
+      var flag = true;
+      if (flag) {
+        $('.txt_content li').hover(() => {
+          $('.less_meer').fadeIn(3000);
+        }, () => {
+          $('.less_meer').fadeOut(3000);
+        });
+      }
+      
+      var pList = $(item).find('p')
+//      console.log(pList);
+      for (var i = 3; i < pList.length; i++) {
+        $(pList[i]).hide()
+      }
+      
+      $('.less_meer').click(function () {
+        flag = false;
+        console.log(flag)
+//        console.log(this);
+        $('.less_meer').parent('li').addClass('bounce');
+        $('.maskDiv').show();
+        $('.bounce').addClass('bounce');
+        $('.title-p').find('.close').show();
+        $(this).hide()
+        for (var i = 0; i < pList.length; i++) {
+//          console.log($(pList[i]))
+          $(pList).show()
+        }
+        cover()
+      });
+
+//      console.log(flag)
+      $('.close').click(function () {
+        flag = true;
+        $('.bounce').removeClass('bounce');
+        $('.maskDiv').hide();
+        $('.title-p').find('.close').hide();
+        for (var i = 3; i < pList.length; i++) {
+          $(pList[i]).hide()
+        }
+        undercover();
+      });
+      
     });
     
-    $('.close').click(function () {
-      $('.bounce').hide();
-    });
-    
-    $('#headerImages .shadow').hover(() => {
-      $('.less_meer').fadeIn(3000);
-    }, () => {
-      $('.less_meer').fadeOut(3000);
-    });
     
     $('.inli').hover(
         () => {
@@ -386,14 +438,14 @@
         var pArr = $(obj).find('.NieuwsContentList li').find('div')
 //        console.log(pArr)
         $(pArr).each((i, ele) => {
-          $(ele).find('p:gt(0)').slideToggle(300)
+          $(ele).find('p:gt(0)').slideToggle(400)
         })
       })
       var i = $(obj).find('h3').find('i');
-      if(i.hasClass('up')){
+      if (i.hasClass('up')) {
         i.removeClass('up');
         i.addClass('down')
-      }else {
+      } else {
         i.removeClass('down');
         i.addClass('up')
       }

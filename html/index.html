@@ -393,6 +393,20 @@
       }
     }
   })
-
+  
+  $(window).scroll(function () {
+    var sc = $(window).scrollTop();
+    var rwidth = $(window).width()
+    if (sc > 0) {
+      $("#topBtn").css("display", "block");
+      $("#topBtn").css("left", (rwidth - 36) + "px")
+    } else {
+      $("#topBtn").css("display", "none");
+    }
+  })
+  $("#topBtn").click(function () {
+    var sc = $(window).scrollTop();
+    $('body,html').animate({scrollTop: 0}, 500);
+  })
 </script>
 </html>

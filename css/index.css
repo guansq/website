@@ -7,6 +7,7 @@ html, body {
 }
 
 * {
+  cursor: pointer;
   box-sizing: border-box;
   outline: none;
 }
@@ -1204,16 +1205,15 @@ p {
 }
 
 /*nieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.html*/
-.bounce{
-  /*width: 900px;*/
-  /*height: 600px;*/
-  /*z-index: 100;*/
-  display: none;
+.txt_content li.bounce{
+  width: 1000px;
+  z-index: 999;
   margin: 10px 0;
-  background: #f4f4f4;
+  background: #ffffff;
+  position: fixed;
+  padding:20px;
 }
 .less_meer{
-  display: none;
   background: #F7750B;
   z-index:10;
   width: 110px;
@@ -1223,24 +1223,21 @@ p {
   -moz-border-radius: 5px;
 }
 .less_meer span{
-  display: block;
+  display: inline-block;
   line-height:28px;
 }
 
 .less_meer span.left{
+  height:100%;
   text-align: center;
   width:75%;
   display: block;
   border-right: 1px solid #ffffff;
 }
-.title-div{
-  padding:20px;
+.title-p{
+  width:100%;
 }
-.title-div span{
-  font-size: 16px;
-  color: #333;
-}
-.title-div span.close{
+.title-p span.close{
   display: block;
   background: url("../image/index/header_bg.png");
   width: 10px;
@@ -1305,11 +1302,26 @@ p {
   text-align: center;
   font-size: 16px;
 }
+.txt_content li{
+  width:45%;
+}
+.txt_content .src,.txt_content .tit{
+  color: #F7750B;
+}
+.txt_content .tit{
+  font-size: 18px;
+  margin: 20px 0;
+}
 
-
-
-
-
+.maskDiv{
+  background: #000;
+  opacity:0.5;
+  height:100%;
+  width:100%;
+  z-index:100;
+  position: fixed;
+  top:0;
+}
 
 
 

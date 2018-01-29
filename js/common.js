@@ -61,7 +61,12 @@ $(function () {
 })
 
 
-
+function cover () {
+  $('.maskDiv').show()
+}
+function undercover () {
+  $('.maskDiv').hide()
+}
 
 
 
