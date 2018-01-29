@@ -1273,10 +1273,38 @@ p {
 .hoverturn{
   color: #b6b4b4;
 }
+.outli h3 i.down{
+  display: inline-block;
+  background: url("../image/index/news_arrow_down.png");
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
 
+.outli h3 i.up{
+  display: inline-block;
+  background: url("../image/index/news_arrow_up.png");
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
 
-
-
+.intro_pd li.shadow{
+  background: #000;
+  opacity: 0.5;
+  position: relative;
+}
+.intro_pd li > span{
+  display: none;
+}
+.intro_pd li span.span-title{
+  position: absolute;
+  top:45%;
+  width:100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+}
 
 
 
