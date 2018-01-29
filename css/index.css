@@ -1212,6 +1212,10 @@ p {
   background: #ffffff;
   position: fixed;
   padding:20px;
+  left: 50%;
+  top:50%;
+  margin-left: -500px;
+  margin-top:-250px;
 }
 .less_meer{
   background: #F7750B;
@@ -1221,6 +1225,9 @@ p {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+}
+.less_meered{
+  display: none;
 }
 .less_meer span{
   display: inline-block;
