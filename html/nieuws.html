@@ -108,7 +108,7 @@
    <div class="fixWauto clearfloat">
       <ul class="txt_content ffc_sb">
          <li>
-            <p class="ffc_sb title-p"><span class="src">10 JANUARI 2018</span> <span class="close" style="display: none"></span></p>
+            <p class="title-p"><span class="src">10 JANUARI 2018</span> </p> <span class="close" style="display: none"></span>
             <h3 class="tit">Let’s meet @ Lyon of Nieuwegein!</h3>
             <p>We hebben het al eens gezegd; 2018 wordt een IMPRESSIVE jaar! En wij beginnen</p>
             <p>NL | 6 februari | Vakdag Print & Sign Nieuwegein | stand E36
@@ -121,7 +121,7 @@
             </div>
          </li>
          <li>
-            <p class="ffc_sb title-p"><span class="src">10 JANUARI 2018</span> <span class="close" style="display:none;"></span></p>
+            <p class="title-p"><span class="src">10 JANUARI 2018</span> </p><span class="close" style="display:none;"></span>
             <h3 class="tit">Let’s meet @ Lyon of Nieuwegein!</h3>
             <p>We hebben het al eens gezegd; 2018 wordt een IMPRESSIVE jaar! En wij beginnen
                dit nieuwe jaar goed met 2 kleurrijke evenementen,
@@ -396,7 +396,7 @@
         $('.less_meer').parent('li').addClass('bounce');
         $('.maskDiv').show();
         $('.bounce').addClass('bounce');
-        $('.title-p').find('.close').show();
+        $('.txt_content li').find('.close').show();
         $('.txt_content li').unbind('mouseenter').unbind('mouseleave');
         $('.less_meer').hide()
         for (var i = 0; i < pList.length; i++) {
@@ -414,7 +414,7 @@
         });
         $('.bounce').removeClass('bounce');
         $('.maskDiv').hide();
-        $('.title-p').find('.close').hide();
+        $('.txt_content li').find('.close').hide();
         for (var i = 3; i < pList.length; i++) {
           $(pList[i]).hide()
         }
