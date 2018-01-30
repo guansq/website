@@ -1205,8 +1205,13 @@ p {
 }
 
 /*nieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.htmlnieuws.html*/
+.txt_content li img{
+  margin:10px 0;
+}
+
 .txt_content li.bounce{
   width: 1000px;
+  height:80%;
   z-index: 999;
   margin: 10px 0;
   background: #ffffff;
@@ -1215,7 +1220,13 @@ p {
   left: 50%;
   top:50%;
   margin-left: -500px;
-  margin-top:-250px;
+  margin-top:-350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.txt_content li.bounce p img{
+  display: block;
+  margin-top:10px;
 }
 .less_meer{
   background: #F7750B;
