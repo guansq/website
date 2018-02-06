@@ -68,7 +68,7 @@ function undercover () {
   $('.maskDiv').hide()
 }
 
-
+console.log($(document).scrollTop)
 
 
 

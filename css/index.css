@@ -7,9 +7,11 @@ html, body {
 }
 
 * {
-  cursor: pointer;
   box-sizing: border-box;
   outline: none;
+}
+a{
+  cursor: pointer;
 }
 
 ::selection {
@@ -75,7 +77,7 @@ body {
 }
 
 .content {
-  width: 980px;
+  width: 1300px;
   margin: 0 auto;
   height: auto;
 }
@@ -717,7 +719,7 @@ body {
 }
 
 .fixWauto {
-  width: 980px;
+  width:1300px;
   margin: 0 auto;
 }
 .mg_lr_20{
@@ -896,7 +898,7 @@ body {
   z-index: 20;
   color: #333333;
   font-size: 20px;
-  width: 980px;
+  width: 1300px;
   height: 300px;
 }
 
@@ -932,7 +934,7 @@ body {
 }
 
 .title-a {
-  width: 980px;
+  width: 1300px;
   margin: 60px auto 0 auto;
 }
 
@@ -1314,7 +1316,7 @@ span.close{
 
 .intro_pd li.shadow{
   background: #000;
-  opacity: 0.5;
+  opacity: 0.8;
   position: relative;
 }
 .intro_pd li > span{
